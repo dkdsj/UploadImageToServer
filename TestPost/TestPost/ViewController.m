@@ -31,7 +31,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {    
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSArray *imgArray = @[@"back4.jpg",@"bk_1.jpg",@"bk_3.jpg",@"bk_4.jpg",@"bk_5.jpg"];
     int x = arc4random()%imgArray.count;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:imgArray[x]]];
@@ -56,7 +56,7 @@
     
     _manager.requestSerializer  = [AFHTTPRequestSerializer serializer ] ;
     _manager.responseSerializer = [AFHTTPResponseSerializer serializer] ;
-
+    
     [_manager POST:@"http://192.168.0.130:8000/app/uploadPictures"
         parameters:@{@"accountId":@"1"} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData)
      {
@@ -66,7 +66,7 @@
          //在网络开发中，上传文件时，文件是不允许被覆盖，文件重名
          //要解决此问题，可以在上传时使用当前的系统事件作为文件名
          NSDateFormatter *formatter = [[NSDateFormatter alloc] init] ;
-
+         
          //设置时间格式
          formatter.dateFormat = @"yyyyMMddHHmmss" ;
          NSString *str = [formatter stringFromDate:[NSDate date]] ;
@@ -75,7 +75,7 @@
          //压缩图片
          //_imageEdit是从相机获取的图片
          NSData *imageData = UIImageJPEGRepresentation([UIImage imageNamed:@"bk_3.jpg"], 0.1);
-
+         
          //上传图片到服务器
          [formData appendPartWithFileData:imageData name:@"files" fileName:fileName mimeType:@"image/*"] ;
      }
@@ -104,7 +104,7 @@
     self.labelMsg.text = @"init";
     
     NSData *imageData = UIImageJPEGRepresentation([UIImage imageNamed:@"bk_3.jpg"], 0);
-
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];//初始化请求对象
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];//设置服务器允许的请求格式内容
     //    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html",@"text/json", @"text/javascript,multipart/form-data", nil];
@@ -131,24 +131,24 @@
 
 - (void)pmdUpload {
     self.labelMsg.text = @"init";
-
-    NSData *imageData = UIImageJPEGRepresentation([UIImage imageNamed:@"bk_3.jpg"], 0);
-
-    [self uploadFileDict:@{@"accountId":@"1",
-                           @"files":imageData,
-                           @"fileName":@"background"
-                           }
-             toUrlString:@"http://192.168.0.130:8000/app/uploadPictures"];
     
+    NSData *imageData = UIImageJPEGRepresentation([UIImage imageNamed:@"bk_3.jpg"], 0);
+    NSDictionary *param = @{@"accountId":@"1",
+                            @"files":imageData,
+                            @"fileName":@"background"
+                            };
+    
+    [self uploadWithParam:param url:@"http://192.168.0.130:8000/app/uploadPictures"];
 }
+
 #define kBoundary @"------------0x0x0x0x0x0x0x0x"
 #define IMAGE_CONTENT  @"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\nContent-Type: image/jpeg\r\n\r\n"
 #define STRING_CONTENT @"Content-Disposition: form-data; name=\"%@\"\r\n\r\n"
-#define MULTIPART @"multipart/form-data; boundary=------------0x0x0x0x0x0x0x0x"
 #define DATA(X)    [X dataUsingEncoding:NSUTF8StringEncoding]
-//upload
-- (void)uploadFileDict:(NSDictionary *)dict toUrlString:(NSString *)urlString {
-    NSData *postData = [self prepareDataForUpload:dict];
+#define MULTIPART @"multipart/form-data; boundary=------------0x0x0x0x0x0x0x0x"
+
+- (void)uploadWithParam:(NSDictionary *)dict url:(NSString *)urlString {
+    NSData *postData = [self prepareData:dict];
     
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
@@ -157,7 +157,7 @@
     //[urlRequest setHTTPBody:postData];//在session传data就注释, session传request就设置body
     
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    config.timeoutIntervalForRequest = 10;
+    config.timeoutIntervalForRequest = 30;
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
     [[session uploadTaskWithRequest:urlRequest fromData:postData completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -170,11 +170,11 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             self.labelMsg.text = outstring;
         });
-
+        
     }] resume];
 }
 
-- (NSData *)prepareDataForUpload:(NSDictionary*)dict {
+- (NSData *)prepareData:(NSDictionary*)dict {
     NSArray *keys = [dict allKeys];
     NSMutableData *result = [NSMutableData data];
     
