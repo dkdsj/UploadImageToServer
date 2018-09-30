@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD4F38732160EA4D005A7E59 /* zhifu.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F38722160EA4D005A7E59 /* zhifu.png */; };
+		CD4F38762160ED94005A7E59 /* UploadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4F38752160ED94005A7E59 /* UploadHelper.m */; };
 		CD5036312149F686000A874F /* back4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD50362C2149F686000A874F /* back4.jpg */; };
 		CD5036322149F686000A874F /* back2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD50362D2149F686000A874F /* back2.jpg */; };
 		CD5036332149F686000A874F /* back3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD50362E2149F686000A874F /* back3.jpg */; };
@@ -32,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD4F38722160EA4D005A7E59 /* zhifu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhifu.png; sourceTree = "<group>"; };
+		CD4F38742160ED94005A7E59 /* UploadHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadHelper.h; sourceTree = "<group>"; };
+		CD4F38752160ED94005A7E59 /* UploadHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadHelper.m; sourceTree = "<group>"; };
 		CD50362C2149F686000A874F /* back4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back4.jpg; sourceTree = "<group>"; };
 		CD50362D2149F686000A874F /* back2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back2.jpg; sourceTree = "<group>"; };
 		CD50362E2149F686000A874F /* back3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back3.jpg; sourceTree = "<group>"; };
@@ -82,6 +87,7 @@
 		CD4F38682160AE61005A7E59 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				CD4F38722160EA4D005A7E59 /* zhifu.png */,
 				CD50362F2149F686000A874F /* back1.jpg */,
 				CD50362D2149F686000A874F /* back2.jpg */,
 				CD50362E2149F686000A874F /* back3.jpg */,
@@ -140,6 +146,8 @@
 				CDEAC9922148A50200094553 /* AppDelegate.m */,
 				CDEAC9942148A50200094553 /* ViewController.h */,
 				CDEAC9952148A50200094553 /* ViewController.m */,
+				CD4F38742160ED94005A7E59 /* UploadHelper.h */,
+				CD4F38752160ED94005A7E59 /* UploadHelper.m */,
 				CDEAC9972148A50200094553 /* Main.storyboard */,
 				CDEAC99A2148A50300094553 /* Assets.xcassets */,
 				CDEAC99C2148A50300094553 /* LaunchScreen.storyboard */,
@@ -210,6 +218,7 @@
 			files = (
 				CD5036332149F686000A874F /* back3.jpg in Resources */,
 				CD50363C2149F79E000A874F /* bk_2.jpg in Resources */,
+				CD4F38732160EA4D005A7E59 /* zhifu.png in Resources */,
 				CDEAC99E2148A50300094553 /* LaunchScreen.storyboard in Resources */,
 				CD5036312149F686000A874F /* back4.jpg in Resources */,
 				CD50363E2149F79E000A874F /* bk_5.jpg in Resources */,
@@ -233,6 +242,7 @@
 			files = (
 				CDD0892321606BD00031E4F3 /* AFURLSessionManager.m in Sources */,
 				CDEAC9962148A50200094553 /* ViewController.m in Sources */,
+				CD4F38762160ED94005A7E59 /* UploadHelper.m in Sources */,
 				CDEAC9A12148A50300094553 /* main.m in Sources */,
 				CDD0891F21606BD00031E4F3 /* AFNetworkReachabilityManager.m in Sources */,
 				CDEAC9932148A50200094553 /* AppDelegate.m in Sources */,

@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "AFNetworking.h"
+#import "UploadHelper.h"
+
+NSString *baseURL = @"http://192.168.0.130:8000/app/uploadPictures";
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *b1;
@@ -57,8 +60,7 @@
     _manager.requestSerializer  = [AFHTTPRequestSerializer serializer ] ;
     _manager.responseSerializer = [AFHTTPResponseSerializer serializer] ;
     
-    [_manager POST:@"http://192.168.0.130:8000/app/uploadPictures"
-        parameters:@{@"accountId":@"1"} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData)
+    [_manager POST:baseURL parameters:@{@"accountId":@"1"} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData)
      {
          NSData *data = [@"1" dataUsingEncoding:NSUTF8StringEncoding] ;
          [formData appendPartWithFormData:data name:@"studentId"] ;
@@ -110,7 +112,7 @@
     //    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html",@"text/json", @"text/javascript,multipart/form-data", nil];
     
     //上传图片/文字，只能同POST
-    [manager POST:@"http://192.168.0.130:8000/app/uploadPictures" parameters:@{@"accountId":@"1"} headers:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [manager POST:baseURL parameters:@{@"accountId":@"1"} headers:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         // 注意：这个name（我的后台给的字段是file）一定要和后台的参数字段一样 否则不成功
         [formData appendPartWithFileData:imageData name:@"file" fileName:@"aaa.jpg" mimeType:@"image/jpg"];
         // [formData appendPartWithFormData:[@"wfWiEWrgEFA9A78512weF7106A" dataUsingEncoding:NSUTF8StringEncoding] name:@"aaa"];
@@ -125,8 +127,19 @@
     }];
 }
 
+//后台接口 /app/uploadPictures ---> Integer accountId, MultipartFile [] files
 - (void)postWitdData {
     self.labelMsg.text = @"init";
+    
+    NSData *imageData = UIImageJPEGRepresentation([UIImage imageNamed:@"bk_3.jpg"], 0);
+    NSDictionary *param = @{@"accountId":@"1",
+                            @"files":imageData,
+                            };
+    
+    UploadHelper *uh = [UploadHelper new];
+    [uh uploadPath:baseURL param:param fileName:@"abc.jpg" result:^(id response) {
+        self.labelMsg.text = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+    }];
 }
 
 - (void)pmdUpload {
@@ -138,7 +151,7 @@
                             @"fileName":@"background"
                             };
     
-    [self uploadWithParam:param url:@"http://192.168.0.130:8000/app/uploadPictures"];
+    [self uploadWithParam:param url:baseURL];
 }
 
 #define kBoundary @"------------0x0x0x0x0x0x0x0x"
@@ -222,4 +235,5 @@
             break;
     }
 }
+
 @end
