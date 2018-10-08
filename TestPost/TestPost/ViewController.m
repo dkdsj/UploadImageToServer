@@ -42,11 +42,12 @@ NSString *baseURL = @"http://192.168.0.130:8000/app/uploadPictures";
     [self initData];
 }
 
+//@"https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif"
 - (void)initData {
-    FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif"]]];
+    FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://hjq-1257036536.cos.ap-shanghai.myqcloud.com/gift/520.gif"]]];
     FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
     imageView.animatedImage = image;
-    imageView.frame = CGRectMake(0.0, 0.0, 100.0, 100.0);
+    imageView.frame = self.view.bounds;
     [self.view addSubview:imageView];
 }
 

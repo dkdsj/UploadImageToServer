@@ -49,7 +49,6 @@
 		CD62CD99216B915B003561DC /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CD62CD7F216B915B003561DC /* UIView+WebCacheOperation.m */; };
 		CD62CDA0216B9648003561DC /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CD62CD9C216B9648003561DC /* FLAnimatedImage.m */; };
 		CD62CDA1216B9648003561DC /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD62CD9E216B9648003561DC /* FLAnimatedImageView.m */; };
-		CD62CDA2216B9648003561DC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD62CD9F216B9648003561DC /* Info.plist */; };
 		CDD0891E21606BD00031E4F3 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0891221606BD00031E4F3 /* AFHTTPSessionManager.m */; };
 		CDD0891F21606BD00031E4F3 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0891521606BD00031E4F3 /* AFNetworkReachabilityManager.m */; };
 		CDD0892021606BD00031E4F3 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0891721606BD00031E4F3 /* AFSecurityPolicy.m */; };
@@ -139,7 +138,6 @@
 		CD62CD9C216B9648003561DC /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
 		CD62CD9D216B9648003561DC /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
 		CD62CD9E216B9648003561DC /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
-		CD62CD9F216B9648003561DC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDD0891021606BD00031E4F3 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		CDD0891121606BD00031E4F3 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		CDD0891221606BD00031E4F3 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 				CD62CD9C216B9648003561DC /* FLAnimatedImage.m */,
 				CD62CD9D216B9648003561DC /* FLAnimatedImageView.h */,
 				CD62CD9E216B9648003561DC /* FLAnimatedImageView.m */,
-				CD62CD9F216B9648003561DC /* Info.plist */,
 			);
 			path = FLAnimatedImage;
 			sourceTree = "<group>";
@@ -395,7 +392,6 @@
 				CD50363E2149F79E000A874F /* bk_5.jpg in Resources */,
 				CD50363F2149F79E000A874F /* bk_4.jpg in Resources */,
 				CDEAC99B2148A50300094553 /* Assets.xcassets in Resources */,
-				CD62CDA2216B9648003561DC /* Info.plist in Resources */,
 				CD50363B2149F79E000A874F /* bk_1.jpg in Resources */,
 				CD5036342149F686000A874F /* back1.jpg in Resources */,
 				CD50363D2149F79E000A874F /* bk_3.jpg in Resources */,
