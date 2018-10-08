@@ -19,6 +19,7 @@
 		CD50363D2149F79E000A874F /* bk_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD5036382149F79E000A874F /* bk_3.jpg */; };
 		CD50363E2149F79E000A874F /* bk_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD5036392149F79E000A874F /* bk_5.jpg */; };
 		CD50363F2149F79E000A874F /* bk_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD50363A2149F79E000A874F /* bk_4.jpg */; };
+		CD59A3BD216B281500A0F6F1 /* PickImageTakePhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD59A3BC216B281500A0F6F1 /* PickImageTakePhotoVC.m */; };
 		CDD0891E21606BD00031E4F3 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0891221606BD00031E4F3 /* AFHTTPSessionManager.m */; };
 		CDD0891F21606BD00031E4F3 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0891521606BD00031E4F3 /* AFNetworkReachabilityManager.m */; };
 		CDD0892021606BD00031E4F3 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0891721606BD00031E4F3 /* AFSecurityPolicy.m */; };
@@ -47,6 +48,8 @@
 		CD5036382149F79E000A874F /* bk_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bk_3.jpg; sourceTree = "<group>"; };
 		CD5036392149F79E000A874F /* bk_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bk_5.jpg; sourceTree = "<group>"; };
 		CD50363A2149F79E000A874F /* bk_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bk_4.jpg; sourceTree = "<group>"; };
+		CD59A3BB216B281500A0F6F1 /* PickImageTakePhotoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickImageTakePhotoVC.h; sourceTree = "<group>"; };
+		CD59A3BC216B281500A0F6F1 /* PickImageTakePhotoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickImageTakePhotoVC.m; sourceTree = "<group>"; };
 		CDD0891021606BD00031E4F3 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		CDD0891121606BD00031E4F3 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		CDD0891221606BD00031E4F3 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				CDEAC9922148A50200094553 /* AppDelegate.m */,
 				CDEAC9942148A50200094553 /* ViewController.h */,
 				CDEAC9952148A50200094553 /* ViewController.m */,
+				CD59A3BB216B281500A0F6F1 /* PickImageTakePhotoVC.h */,
+				CD59A3BC216B281500A0F6F1 /* PickImageTakePhotoVC.m */,
 				CD4F38742160ED94005A7E59 /* UploadHelper.h */,
 				CD4F38752160ED94005A7E59 /* UploadHelper.m */,
 				CDEAC9972148A50200094553 /* Main.storyboard */,
@@ -248,6 +253,7 @@
 				CDEAC9932148A50200094553 /* AppDelegate.m in Sources */,
 				CDD0892021606BD00031E4F3 /* AFSecurityPolicy.m in Sources */,
 				CDD0892121606BD00031E4F3 /* AFURLRequestSerialization.m in Sources */,
+				CD59A3BD216B281500A0F6F1 /* PickImageTakePhotoVC.m in Sources */,
 				CDD0892221606BD00031E4F3 /* AFURLResponseSerialization.m in Sources */,
 				CDD0891E21606BD00031E4F3 /* AFHTTPSessionManager.m in Sources */,
 			);

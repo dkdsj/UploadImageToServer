@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AFNetworking.h"
 #import "UploadHelper.h"
+#import "PickImageTakePhotoVC.h"
 
 NSString *baseURL = @"http://192.168.0.130:8000/app/uploadPictures";
 
@@ -32,6 +33,13 @@ NSString *baseURL = @"http://192.168.0.130:8000/app/uploadPictures";
     
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(changeHeadImage)];
+}
+
+- (void)changeHeadImage {
+    PickImageTakePhotoVC *pp = [PickImageTakePhotoVC new];
+    [self.navigationController pushViewController:pp animated:YES];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
