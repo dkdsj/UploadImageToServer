@@ -9,6 +9,8 @@
 #import "PickImageTakePhotoVC.h"
 #import <Photos/Photos.h>
 
+#define UIAlertStyle (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)?UIAlertControllerStyleAlert:UIAlertControllerStyleActionSheet
+
 @interface PickImageTakePhotoVC ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) UIImageView *ivIcon;
 @end
@@ -25,7 +27,7 @@
 }
 
 - (void)changeHeadImage {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertStyle];
     UIAlertAction *actionp = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self takePhoto];
     }];
