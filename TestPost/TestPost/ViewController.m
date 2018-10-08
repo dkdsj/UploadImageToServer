@@ -10,6 +10,8 @@
 #import "AFNetworking.h"
 #import "UploadHelper.h"
 #import "PickImageTakePhotoVC.h"
+#import "DownImagesVC.h"
+#import "FLAnimatedImage.h"
 
 NSString *baseURL = @"http://192.168.0.130:8000/app/uploadPictures";
 
@@ -35,6 +37,22 @@ NSString *baseURL = @"http://192.168.0.130:8000/app/uploadPictures";
     // Do any additional setup after loading the view, typically from a nib.
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(changeHeadImage)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(downImages)];
+    
+    [self initData];
+}
+
+- (void)initData {
+    FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif"]]];
+    FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
+    imageView.animatedImage = image;
+    imageView.frame = CGRectMake(0.0, 0.0, 100.0, 100.0);
+    [self.view addSubview:imageView];
+}
+
+- (void)downImages {
+    DownImagesVC *pp = [DownImagesVC new];
+    [self.navigationController pushViewController:pp animated:YES];
 }
 
 - (void)changeHeadImage {
