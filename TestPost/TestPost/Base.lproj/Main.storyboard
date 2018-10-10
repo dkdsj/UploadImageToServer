@@ -18,24 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phs-mB-8QF">
-                                <rect key="frame" x="0.0" y="113" width="375" height="30"/>
-                                <state key="normal" title="postImageToServer"/>
-                                <connections>
-                                    <action selector="b1111:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nY9-F0-984"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcX-Bx-NLF">
-                                <rect key="frame" x="0.0" y="242" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="132" width="150" height="60"/>
+                                <color key="backgroundColor" red="0.99153031650737555" green="0.18817957844864575" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dfd-jz-hu7"/>
+                                </constraints>
                                 <state key="normal" title="appendData1"/>
                                 <connections>
                                     <action selector="b1111:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nhg-xc-nTu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOO-ww-wNo">
-                                <rect key="frame" x="0.0" y="431" width="375" height="86"/>
+                                <rect key="frame" x="0.0" y="268" width="150" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="86" id="V93-Il-Idq"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="09x-hZ-LVN"/>
+                                    <constraint firstAttribute="height" constant="60" id="V93-Il-Idq"/>
                                 </constraints>
                                 <state key="normal" title="pmdUpload"/>
                                 <connections>
@@ -52,35 +51,91 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVe-n2-89t">
-                                <rect key="frame" x="0.0" y="324" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="200" width="150" height="60"/>
+                                <color key="backgroundColor" red="0.98781255690902725" green="1" blue="0.84782814964497177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="Xij-Db-Epu"/>
+                                    <constraint firstAttribute="height" constant="60" id="Xij-Db-Epu"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="pFA-4s-Y89"/>
                                 </constraints>
                                 <state key="normal" title="postWitdData"/>
                                 <connections>
                                     <action selector="b1111:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TPt-X0-9LT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phs-mB-8QF">
+                                <rect key="frame" x="0.0" y="64" width="150" height="60"/>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.56078431370000004" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="WMI-30-VMF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="bos-kL-1Re"/>
+                                    <constraint firstAttribute="height" constant="60" id="qca-4g-HpE"/>
+                                </constraints>
+                                <state key="normal" title="postImageToServer"/>
+                                <connections>
+                                    <action selector="b1111:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nY9-F0-984"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oze-sJ-JyB">
+                                <rect key="frame" x="267" y="64" width="108" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.79334849148700148" green="0.78996574170523126" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="多文件下载"/>
+                                <connections>
+                                    <action selector="b1111:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nza-Z0-ABX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rk-Kl-Gn2">
+                                <rect key="frame" x="267" y="132" width="108" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.56078431370000004" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dp-Rm-MFU">
+                                <rect key="frame" x="267" y="200" width="108" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.55275162417515555" green="0.99511511566610655" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhB-xj-Gus">
+                                <rect key="frame" x="267" y="268" width="108" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.73045616576683292" blue="0.77000061652489693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJY-AB-Mzz">
+                                <rect key="frame" x="267" y="336" width="108" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.94142909634732463" blue="0.21246518801492553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Pw3-ld-YLh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0cQ-7n-8Qu"/>
-                            <constraint firstItem="vOO-ww-wNo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4gn-a0-RCC"/>
+                            <constraint firstItem="vOO-ww-wNo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-225" id="4gn-a0-RCC"/>
+                            <constraint firstItem="vOO-ww-wNo" firstAttribute="top" secondItem="cVe-n2-89t" secondAttribute="bottom" constant="8" id="6Wq-dD-nQ0"/>
+                            <constraint firstItem="FcX-Bx-NLF" firstAttribute="leading" secondItem="cVe-n2-89t" secondAttribute="leading" id="8fr-YN-NOk"/>
                             <constraint firstItem="cVe-n2-89t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DVd-hu-N2a"/>
-                            <constraint firstItem="phs-mB-8QF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="Lkq-da-P1E"/>
+                            <constraint firstItem="FcX-Bx-NLF" firstAttribute="leading" secondItem="phs-mB-8QF" secondAttribute="leading" id="Dqt-69-ahI"/>
+                            <constraint firstItem="cVe-n2-89t" firstAttribute="top" secondItem="FcX-Bx-NLF" secondAttribute="bottom" constant="8" symbolic="YES" id="Eh4-cG-WZQ"/>
+                            <constraint firstItem="phs-mB-8QF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HwL-iR-nWK"/>
+                            <constraint firstItem="phs-mB-8QF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="I38-TZ-IZS"/>
+                            <constraint firstItem="cVe-n2-89t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NqF-Wu-Ahy"/>
+                            <constraint firstItem="cVe-n2-89t" firstAttribute="top" secondItem="FcX-Bx-NLF" secondAttribute="bottom" constant="8" id="P1Z-Cv-aDp"/>
                             <constraint firstItem="Pw3-ld-YLh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="R9V-Ya-6Tr"/>
-                            <constraint firstItem="vOO-ww-wNo" firstAttribute="top" secondItem="cVe-n2-89t" secondAttribute="bottom" constant="32" id="Sxf-cz-uIY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vOO-ww-wNo" secondAttribute="bottom" constant="150" id="Wts-Jm-QM9"/>
-                            <constraint firstItem="vOO-ww-wNo" firstAttribute="top" secondItem="cVe-n2-89t" secondAttribute="bottom" constant="32" id="YRr-zx-XCO"/>
-                            <constraint firstItem="FcX-Bx-NLF" firstAttribute="top" secondItem="phs-mB-8QF" secondAttribute="bottom" constant="99" id="ZDp-IG-tI4"/>
-                            <constraint firstItem="FcX-Bx-NLF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="afh-7o-MK3"/>
-                            <constraint firstItem="FcX-Bx-NLF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="alE-eS-a3T"/>
-                            <constraint firstItem="phs-mB-8QF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jVh-oG-r2J"/>
+                            <constraint firstItem="vOO-ww-wNo" firstAttribute="top" secondItem="cVe-n2-89t" secondAttribute="bottom" constant="8" id="Sxf-cz-uIY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vOO-ww-wNo" secondAttribute="bottom" constant="339" id="Wts-Jm-QM9"/>
+                            <constraint firstItem="vOO-ww-wNo" firstAttribute="top" secondItem="cVe-n2-89t" secondAttribute="bottom" constant="8" id="YRr-zx-XCO"/>
+                            <constraint firstItem="vOO-ww-wNo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZLb-WV-pbi"/>
+                            <constraint firstItem="FcX-Bx-NLF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c0r-5G-FDr"/>
+                            <constraint firstItem="FcX-Bx-NLF" firstAttribute="trailing" secondItem="phs-mB-8QF" secondAttribute="trailing" id="ezM-O9-cHK"/>
                             <constraint firstItem="Pw3-ld-YLh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ke3-ZQ-Uft"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="phs-mB-8QF" secondAttribute="trailing" id="lny-km-UGC"/>
-                            <constraint firstItem="cVe-n2-89t" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nQY-cZ-EkX"/>
-                            <constraint firstItem="FcX-Bx-NLF" firstAttribute="top" secondItem="phs-mB-8QF" secondAttribute="bottom" constant="99" id="qNm-r3-6sg"/>
+                            <constraint firstItem="cVe-n2-89t" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-225" id="nQY-cZ-EkX"/>
+                            <constraint firstItem="FcX-Bx-NLF" firstAttribute="top" secondItem="phs-mB-8QF" secondAttribute="bottom" constant="8" id="pzU-7J-oSS"/>
+                            <constraint firstItem="FcX-Bx-NLF" firstAttribute="trailing" secondItem="cVe-n2-89t" secondAttribute="trailing" id="qxx-p5-Y8s"/>
+                            <constraint firstItem="FcX-Bx-NLF" firstAttribute="top" secondItem="phs-mB-8QF" secondAttribute="bottom" constant="8" symbolic="YES" id="tZ7-LN-jPN"/>
                             <constraint firstItem="vOO-ww-wNo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ut6-NZ-45m"/>
+                            <constraint firstItem="phs-mB-8QF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xab-ee-yON"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

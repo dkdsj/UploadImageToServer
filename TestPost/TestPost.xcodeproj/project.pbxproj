@@ -62,6 +62,10 @@
 		CDEAC99B2148A50300094553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEAC99A2148A50300094553 /* Assets.xcassets */; };
 		CDEAC99E2148A50300094553 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDEAC99C2148A50300094553 /* LaunchScreen.storyboard */; };
 		CDEAC9A12148A50300094553 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEAC9A02148A50300094553 /* main.m */; };
+		CDFFD6F7216E3EFA00D4C983 /* SCSessionDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFFD6F4216E3EFA00D4C983 /* SCSessionDownload.m */; };
+		CDFFD6F8216E3EFA00D4C983 /* SCSessionDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFFD6F6216E3EFA00D4C983 /* SCSessionDownloadManager.m */; };
+		CDFFD6FB216E3F3000D4C983 /* FiledownVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFFD6FA216E3F3000D4C983 /* FiledownVC.m */; };
+		CDFFD6FE216E42B100D4C983 /* GifItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFFD6FD216E42B100D4C983 /* GifItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -165,6 +169,14 @@
 		CDEAC99D2148A50300094553 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDEAC99F2148A50300094553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDEAC9A02148A50300094553 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CDFFD6F3216E3EFA00D4C983 /* SCSessionDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSessionDownload.h; sourceTree = "<group>"; };
+		CDFFD6F4216E3EFA00D4C983 /* SCSessionDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSessionDownload.m; sourceTree = "<group>"; };
+		CDFFD6F5216E3EFA00D4C983 /* SCSessionDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSessionDownloadManager.h; sourceTree = "<group>"; };
+		CDFFD6F6216E3EFA00D4C983 /* SCSessionDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSessionDownloadManager.m; sourceTree = "<group>"; };
+		CDFFD6F9216E3F3000D4C983 /* FiledownVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FiledownVC.h; sourceTree = "<group>"; };
+		CDFFD6FA216E3F3000D4C983 /* FiledownVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FiledownVC.m; sourceTree = "<group>"; };
+		CDFFD6FC216E42B100D4C983 /* GifItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifItem.h; sourceTree = "<group>"; };
+		CDFFD6FD216E42B100D4C983 /* GifItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,9 +338,14 @@
 				CD4F38752160ED94005A7E59 /* UploadHelper.m */,
 				CD62CD47216B90E8003561DC /* DownImagesVC.h */,
 				CD62CD48216B90E8003561DC /* DownImagesVC.m */,
+				CDFFD6F9216E3F3000D4C983 /* FiledownVC.h */,
+				CDFFD6FA216E3F3000D4C983 /* FiledownVC.m */,
+				CDFFD6FC216E42B100D4C983 /* GifItem.h */,
+				CDFFD6FD216E42B100D4C983 /* GifItem.m */,
 				CDEAC9972148A50200094553 /* Main.storyboard */,
 				CDEAC99A2148A50300094553 /* Assets.xcassets */,
 				CDEAC99C2148A50300094553 /* LaunchScreen.storyboard */,
+				CDFFD6F2216E3EFA00D4C983 /* FileDown */,
 				CDCBCD10216C334000738C37 /* Source */,
 				CD62CD9A216B9648003561DC /* FLAnimatedImage */,
 				CD62CD4A216B915B003561DC /* SDWebImage */,
@@ -338,6 +355,17 @@
 				CDEAC9A02148A50300094553 /* main.m */,
 			);
 			path = TestPost;
+			sourceTree = "<group>";
+		};
+		CDFFD6F2216E3EFA00D4C983 /* FileDown */ = {
+			isa = PBXGroup;
+			children = (
+				CDFFD6F3216E3EFA00D4C983 /* SCSessionDownload.h */,
+				CDFFD6F4216E3EFA00D4C983 /* SCSessionDownload.m */,
+				CDFFD6F5216E3EFA00D4C983 /* SCSessionDownloadManager.h */,
+				CDFFD6F6216E3EFA00D4C983 /* SCSessionDownloadManager.m */,
+			);
+			path = FileDown;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +457,7 @@
 				CD62CD85216B915B003561DC /* SDImageCacheConfig.m in Sources */,
 				CD62CD80216B915B003561DC /* NSButton+WebCache.m in Sources */,
 				CDEAC9962148A50200094553 /* ViewController.m in Sources */,
+				CDFFD6FB216E3F3000D4C983 /* FiledownVC.m in Sources */,
 				CD62CD95216B915B003561DC /* UIImage+MultiFormat.m in Sources */,
 				CD62CD83216B915B003561DC /* SDAnimatedImageRep.m in Sources */,
 				CD62CD8D216B915B003561DC /* SDWebImageGIFCoder.m in Sources */,
@@ -446,9 +475,11 @@
 				CD62CD8C216B915B003561DC /* SDWebImageFrame.m in Sources */,
 				CDCBCD13216C334000738C37 /* NSLayoutConstraint+SSLayout.m in Sources */,
 				CDD0891F21606BD00031E4F3 /* AFNetworkReachabilityManager.m in Sources */,
+				CDFFD6FE216E42B100D4C983 /* GifItem.m in Sources */,
 				CD62CD99216B915B003561DC /* UIView+WebCacheOperation.m in Sources */,
 				CDEAC9932148A50200094553 /* AppDelegate.m in Sources */,
 				CDD0892021606BD00031E4F3 /* AFSecurityPolicy.m in Sources */,
+				CDFFD6F7216E3EFA00D4C983 /* SCSessionDownload.m in Sources */,
 				CD62CDA1216B9648003561DC /* FLAnimatedImageView.m in Sources */,
 				CDD0892121606BD00031E4F3 /* AFURLRequestSerialization.m in Sources */,
 				CD62CD84216B915B003561DC /* SDImageCache.m in Sources */,
@@ -460,6 +491,7 @@
 				CD62CD88216B915B003561DC /* SDWebImageCodersManager.m in Sources */,
 				CD62CDA0216B9648003561DC /* FLAnimatedImage.m in Sources */,
 				CDD0891E21606BD00031E4F3 /* AFHTTPSessionManager.m in Sources */,
+				CDFFD6F8216E3EFA00D4C983 /* SCSessionDownloadManager.m in Sources */,
 				CD62CD96216B915B003561DC /* UIImageView+HighlightedWebCache.m in Sources */,
 				CD62CD82216B915B003561DC /* NSImage+WebCache.m in Sources */,
 			);

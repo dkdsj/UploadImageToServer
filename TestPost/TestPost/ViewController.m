@@ -12,6 +12,7 @@
 #import "PickImageTakePhotoVC.h"
 #import "DownImagesVC.h"
 #import "FLAnimatedImage.h"
+#import "FiledownVC.h"
 
 NSString *baseURL = @"http://192.168.0.130:8000/app/uploadPictures";
 
@@ -181,6 +182,41 @@ NSString *baseURL = @"http://192.168.0.130:8000/app/uploadPictures";
     [self uploadWithParam:param url:baseURL];
 }
 
+
+- (IBAction)b1111:(UIButton *)sender {
+    switch (sender.tag) {
+        //左
+        case 1:
+            [self postImageToServer];
+            break;
+        case 2:
+            [self appendData1];
+            break;
+        case 3:
+            [self postWitdData];
+            break;
+        case 4:
+            [self pmdUpload];
+            break;
+        //右
+        case 5:{            
+            FiledownVC *fv = [FiledownVC new];
+            [self.navigationController pushViewController:fv animated:YES];
+        }
+            break;
+        case 6:
+            break;
+        case 7:
+            break;
+        case 8:
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark -
+
 #define kBoundary @"------------0x0x0x0x0x0x0x0x"
 #define IMAGE_CONTENT  @"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\nContent-Type: image/jpeg\r\n\r\n"
 #define STRING_CONTENT @"Content-Disposition: form-data; name=\"%@\"\r\n\r\n"
@@ -243,24 +279,5 @@ NSString *baseURL = @"http://192.168.0.130:8000/app/uploadPictures";
     return result;
 }
 
-
-- (IBAction)b1111:(UIButton *)sender {
-    switch (sender.tag) {
-        case 1:
-            [self postImageToServer];
-            break;
-        case 2:
-            [self appendData1];
-            break;
-        case 3:
-            [self postWitdData];
-            break;
-        case 4:
-            [self pmdUpload];
-            break;
-        default:
-            break;
-    }
-}
 
 @end
