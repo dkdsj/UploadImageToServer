@@ -48,7 +48,7 @@ NSString *baseURL = @"http://192.168.0.130:8000/app/uploadPictures";
     FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
     imageView.animatedImage = image;
     imageView.frame = self.view.bounds;
-    [self.view addSubview:imageView];
+    //[self.view addSubview:imageView];
 }
 
 - (void)downImages {

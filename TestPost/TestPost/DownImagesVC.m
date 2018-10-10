@@ -12,9 +12,14 @@
 #import "FLAnimatedImage.h"
 
 #define kGiftListFilePath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"GiftList.plist"]
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
 @interface DownImagesVC ()
 @property (nonatomic, strong) NSData *passImgData;
+
+@property (nonatomic, strong) NSMutableArray *gifts;
+@property (nonatomic, strong) FLAnimatedImageView *ivGif;
 @end
 
 @implementation DownImagesVC
@@ -154,6 +159,7 @@
     imageView.frame = self.view.bounds;
     [UIApplication.sharedApplication.keyWindow addSubview:imageView];
     
+    self.ivGif = imageView;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [imageView removeFromSuperview];
     });
@@ -203,8 +209,8 @@
                     [imageDics addObject:dic];
                     if (imageDics.count == urls.count) {
                         NSLog(@"gif下载完毕========");
-                        [imageDics writeToFile:kGiftListFilePath atomically:YES];
                         [self showPng];
+                        [imageDics writeToFile:kGiftListFilePath atomically:YES];
                     }
 #endif
                 });
@@ -248,15 +254,5 @@
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     NSLog(@"image = %@, error = %@, contextInfo = %@", image, error, contextInfo);
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
